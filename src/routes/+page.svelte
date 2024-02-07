@@ -9,7 +9,11 @@
 		if(data.user){
 			console.log(data.user)
 			window.location.href = "/Dashboard"
-			localStorage.setItem('user', JSON.stringify(data.user))
+			localStorage.setItem('user', JSON.stringify({
+				"email": data.user.email,
+				"username": data.user.user_metadata.full_name,
+				"avatar": data.user.user_metadata.avatar_url				
+			}))
 		}
 		// console.log(data);
 	}

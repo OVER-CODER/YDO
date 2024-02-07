@@ -10,9 +10,29 @@
       selectedItem = item
       inputVal = '';
     }
-    $: filteredItems = data.names.filter(function(item) {
-      return item.Name.toLowerCase().includes(inputVal.toLowerCase())
-    })
+    // $: filteredItems = data.names.filter(function(item) {
+    //   return item.Name.toLowerCase().includes(inputVal.toLowerCase())
+    // })
+    let fitems = data.names;
+    function getfiltername(input:string){
+        fitems = []
+        for(let i = 0;i<data.names.length;i++){
+        let inputl = input.split(' ');
+        let inc = true;
+        for(let j=0;j<inputl.length;j++){
+            if(!(data.names[i].Name.toLowerCase().includes(inputl[j].toLowerCase()))){
+                inc = false;
+            }
+        }
+        if(inc){
+            console.log(data.names[i]);
+            fitems.push(data.names[i]);
+        }
+    }
+        return fitems;
+    }
+    $: filteredItems = getfiltername(inputVal);
+ 
 </script>
 
 
