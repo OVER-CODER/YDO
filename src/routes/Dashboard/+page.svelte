@@ -35,15 +35,15 @@
  
 </script>
 
-
-<div class="flex justify-center items-center translate-y-80 translate-x-96 h-60 w-60 rounded-3xl bg-slate-400 ">
-  <div class="dropdown ">
+<div class="flex justify-center items-center translate-y-40 flex-col">
+<div class="flex justify-center items-center  h-60 w-svw rounded-3xl ">
+  <div class="dropdown">
     <input 
-      class="input input-bordered" 
+      class="input input-bordered border-4 w-[45vw]" 
       placeholder="Pick your Love💖"
       bind:value={inputVal}
     />
-    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 max-h-80 flex-nowrap overflow-auto">
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
     {#each filteredItems as item}
       <li>
         <button type="button" on:click|preventDefault={() => onItemClicked(item)} role="option" aria-selected={selectedItem === item}>{item.Name}</button>
@@ -52,3 +52,8 @@
     </ul>
   </div>
 </div>
+<button class="bg-base-200 h-12 w-[20vw] rounded-btn">
+  Submit Your Choices
+</button>
+</div>
+
