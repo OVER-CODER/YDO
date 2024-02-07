@@ -1,25 +1,25 @@
 <script lang="ts">
 	import Header from "./Header.svelte";
-	let currstate:string;
-	import { writable } from "svelte/store";
 	import Login from "./Login.svelte"
-	import Mainpage from "./Mainpage.svelte"
-    const state = writable("dumb");
- 
-	
-	state.subscribe((e)=>{
-	  currstate = e;
-	  console.log(currstate)
-	})
+	import { supabase } from "$lib/supabase";
+	import { onMount } from "svelte";
+
+	async function checkuser() {
+		const { data, error } = await supabase.auth.getUser();
+		if(data.user){
+			console.log(data.user)
+			window.location.href = "/Dashboard"
+			localStorage.setItem('user', JSON.stringify(data.user))
+		}
+		// console.log(data);
+	}
+
+	onMount(checkuser)
   </script>
   
   <main>
 	<Header/>
-	{#if currstate=="loggedin"}
-		<Mainpage />
-	{:else}
-	  	<Login />
-	{/if}
+	<Login />
   </main>
   
   <style>
