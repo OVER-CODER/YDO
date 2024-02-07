@@ -1,8 +1,19 @@
 <script lang="ts">
     export let data;
-    console.log(data)
     export let selectedItem: string;
+    import { supabase } from "$lib/supabase";
+	import { onMount } from "svelte";
     $: inputVal = '';
+    async function checkuser() {
+		
+        const { data, error } = await supabase.auth.getSession()
+		if(data.session?.user){
+			console.log(data)
+		} else {
+            window.location.href = "/"
+        }
+    }
+		// console.log(data);
     function onItemClicked(item: string) {
       if (document.activeElement) {
         (document.activeElement as HTMLElement).blur();
@@ -32,7 +43,7 @@
         return fitems;
     }
     $: filteredItems = getfiltername(inputVal);
- 
+    onMount(checkuser)
 </script>
 
 
