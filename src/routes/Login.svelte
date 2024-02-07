@@ -1,13 +1,14 @@
 <script lang="ts">
     import Header from "./Header.svelte";
     import { writable } from "svelte/store";
+    import { supabase } from "$lib/supabase";
     const state = writable("dumb");
     const mode = writable("pfft");
 
-    function Going(e:string): null {
-      state.set("loggingin");
-      mode.set(e)
-      return null;
+    async function SigninWithGoogle() {
+        const {data,error} = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+        })
     }
     </script>
 <div>
@@ -16,8 +17,13 @@
     <div class=" h-[74svh] flex justify-center items-center">
     <div class=" w-1/3 rounded-3xl h-14 flex-col flex justify-center items-center ">
         <div  class="flex justify-center items-center ">
-            <button on:click={()=>{Going("Loginpage")}} class="btn btn-outline btn-primary ext-base ">Login to find you match!</button>
+            <button on:click={SigninWithGoogle} class="btn btn-outline btn-primary ext-base ">Login to find you match!</button>
         </div>
     </div>
     </div>
 </div>
+
+
+<!-- src/routes/+page.svelte -->
+
+

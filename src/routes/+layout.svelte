@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Header from './Header.svelte';
 	import './styles.css';
 </script>
@@ -50,4 +50,38 @@
 			padding: 12px 0;
 		}
 	}
-</style>
+</style> -->
+<!-- 
+<script lang="ts">
+	import { invalidateAll } from "$app/navigation";
+	import {supabaseClient } from "$lib/lib/supabase";
+	import {onMount} from 'svelte';
+	import '../app.postcss';
+
+	onMount(() => {
+		const {
+			data:{ subscription }
+		} = supabaseClient.auth.onAuthStateChange(()=>{
+			invalidateAll();
+		});
+		return () => {
+			subscription.unsubscribe();
+		};
+	});
+</script> -->
+
+<!-- src/routes/+layout.svelte -->
+<script lang="ts">
+	import "./styles.css"
+	import { invalidate } from '$app/navigation'
+	import { onMount } from 'svelte'
+
+</script>
+
+<svelte:head>
+	<title>User Management</title>
+</svelte:head>
+
+<div class="container" style="padding: 50px 0 100px 0">
+	<slot />
+</div>

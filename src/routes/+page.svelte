@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Startpage from "./Startpage.svelte";
-	import Mainpage from "./Mainpage.svelte";
-	import Loginpage from "./Loginpage.svelte";
-	import Login from "./Login.svelte";
+	import Header from "./Header.svelte";
 	let currstate:string;
 	import { writable } from "svelte/store";
+	import Login from "./Login.svelte"
+	import Mainpage from "./Mainpage.svelte"
     const state = writable("dumb");
  
+	
 	state.subscribe((e)=>{
 	  currstate = e;
 	  console.log(currstate)
@@ -14,13 +14,11 @@
   </script>
   
   <main>
+	<Header/>
 	{#if currstate=="loggedin"}
-	<span>hellu!</span>
-	{:else if currstate=="loggingin"}
-	  <Loginpage />
+		<Mainpage />
 	{:else}
-	  <Login />
-	  <!-- <Mainpage/> -->
+	  	<Login />
 	{/if}
   </main>
   

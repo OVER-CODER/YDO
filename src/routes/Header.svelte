@@ -130,7 +130,7 @@
 <main>
     <div class="navbar flex justify-center bg-base-200">
         
-        <div class="navbar-center ">
+        <div class="navbar-center">
           <a href="http://localhost:5174/" class="text-xl font-serif  select-none">You Deserve One!</a>
         </div> 
         
