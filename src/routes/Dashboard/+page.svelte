@@ -2,7 +2,7 @@
     export let data;
     export let selectedItem: string;
     import { supabase } from "$lib/supabase";
-	import { onMount } from "svelte";
+	  import { onMount } from "svelte";
     $: inputVal = '';
     async function checkuser() {
 		
