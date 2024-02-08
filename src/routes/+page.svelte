@@ -4,19 +4,16 @@
 	import { supabase } from "$lib/supabase";
 	import { onMount } from "svelte";
 
-
 	async function checkuser() {
-		const { data, error } = await supabase.auth.getUser();
-		if(data.user){
-			console.log(data.user)
-			window.location.href = "/Dashboard"
-			localStorage.setItem('user', JSON.stringify({
-				"email": data.user.email,
-				"username": data.user.user_metadata.full_name,
-				"avatar": data.user.user_metadata.avatar_url				
-			}))
+		if(localStorage.user){
+			window.location.href = "/Dashboard";
+			return;
 		}
-		// console.log(data);
+		const { data, error } = await supabase.auth.getSession();
+		if(data.session){
+			window.location.href = "/Dashboard";
+		}
+		console.log(data);
 	}
 
 	onMount(checkuser)
