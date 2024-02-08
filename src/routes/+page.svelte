@@ -4,6 +4,7 @@
 	import { supabase } from "$lib/supabase";
 	import { onMount } from "svelte";
 
+
 	async function checkuser() {
 		const { data, error } = await supabase.auth.getUser();
 		if(data.user){
