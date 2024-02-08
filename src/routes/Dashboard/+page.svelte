@@ -76,12 +76,17 @@
     $: filteredItems5 = getfiltername(inputVal[4]);
     onMount(checkuser)
 </script>
+<main class="h-screen w-screen bg-base-200">
 
-<div class="flex justify-center items-center translate-y-40 bg-pink-400 flex-col">
+<div class="flex justify-center items-center translate-y-40 flex-col">
+  <div class="flex justify-center h-10 px-7 font-serif text-xl">
+    <h1> Submit your choices now and comback on Valentines day, to see who you are matched with...</h1>
+</div>
+<div class="h-1/2 w-1/2 flex flex-col justify-center items-center bg-cyan-500">
 <div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-4 w-[45vw]" 
+      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[0]}
     />
@@ -98,28 +103,34 @@
   </div>
 </div>
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
-	<div class="dropdown">
-	  <input 
-		class="input input-bordered border-4 w-[45vw]" 
-		placeholder="Pick your choice"
-		bind:value={inputVal[2]}
-	  />
-	  <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
-	  {#each filteredItems2 as item}
-		<li>
-		  <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no,1)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
-		</li>
-	  {/each}
-	  </ul>
-	</div>
+  <div class="dropdown">
+    <input 
+      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      placeholder="Pick your choice"
+      bind:value={inputVal[1]}
+    />
+    <button class="btn">
+      Delete
+    </button>
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems2 as item}
+      <li>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+      </li>
+    {/each}
+    </ul>
   </div>
+</div>
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-4 w-[45vw]" 
+      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[2]}
     />
+    <button class="btn ">
+      Delete
+    </button>
     <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
     {#each filteredItems3 as item}
       <li>
@@ -132,10 +143,13 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-4 w-[45vw]" 
+      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[3]}
     />
+    <button class="btn">
+      Delete
+    </button>
     <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
     {#each filteredItems4 as item}
       <li>
@@ -148,10 +162,13 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-4 w-[45vw]" 
+      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[4]}
     />
+    <button class="btn">
+      Delete
+    </button>
     <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
     {#each filteredItems5 as item}
       <li>
@@ -161,5 +178,7 @@
     </ul>
   </div>
 </div>
-
 </div>
+</div>
+
+</main>
