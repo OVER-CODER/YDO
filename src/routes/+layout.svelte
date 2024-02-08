@@ -79,7 +79,7 @@
 </script>
 
 <svelte:head>
-	<title>User Management</title>
+	<title>You Deserve One!</title>
 </svelte:head>
 
 <div class="container">
