@@ -3,8 +3,6 @@
     import { writable } from "svelte/store";
     import { supabase } from "$lib/supabase";
     
-    const state = writable("dumb");
-    const mode = writable("pfft");
 
     async function SigninWithGoogle() {
         const {data,error} = await supabase.auth.signInWithOAuth({
