@@ -4,10 +4,10 @@
     let curruser:string|undefined = "";
     import { supabase } from "$lib/supabase";
 	  import { onMount } from "svelte";
-    $: inputVal = '';
+    $: inputVal = ["","","","",""];
     // console.log(data)
     async function checkuser() {
-		
+
         const { data, error } = await supabase.auth.getSession()
 		if(data.session?.user){
 			console.log(data)
@@ -60,20 +60,44 @@
     }
         return fitems;
     }
-    $: filteredItems = getfiltername(inputVal);
+    $: filteredItems1 = getfiltername(inputVal[0]);
+    $: filteredItems2 = getfiltername(inputVal[1]);
+    $: filteredItems3 = getfiltername(inputVal[2]);
+    $: filteredItems4 = getfiltername(inputVal[3]);
+    $: filteredItems5 = getfiltername(inputVal[4]);
     onMount(checkuser)
 </script>
 
-<div class="flex justify-center items-center translate-y-40 flex-col">
-<div class="flex justify-center items-center  h-60 w-svw rounded-3xl ">
+<div class="flex justify-center items-center translate-y-40 bg-pink-400 flex-col">
+<div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
       class="input input-bordered border-4 w-[45vw]" 
-      placeholder="Pick your Love💖"
-      bind:value={inputVal}
+      placeholder="Pick your choice"
+      bind:value={inputVal[0]}
     />
-    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
-    {#each filteredItems as item}
+    <button class="btn">
+      Delete
+    </button>
+    <ul class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems1 as item}
+      <li>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+      </li>
+    {/each}
+    </ul>
+  </div>
+  
+</div>
+<div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
+  <div class="dropdown">
+    <input 
+      class="input input-bordered border-4 w-[45vw]" 
+      placeholder="Pick your choice"
+      bind:value={inputVal[1]}
+    />
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems2 as item}
       <li>
         <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
       </li>
@@ -81,8 +105,54 @@
     </ul>
   </div>
 </div>
-<button class="bg-base-200 h-12 w-[20vw] rounded-btn">
-  Submit Your Choices
-</button>
+<div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
+  <div class="dropdown">
+    <input 
+      class="input input-bordered border-4 w-[45vw]" 
+      placeholder="Pick your choice"
+      bind:value={inputVal[2]}
+    />
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems3 as item}
+      <li>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+      </li>
+    {/each}
+    </ul>
+  </div>
+</div>
+<div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
+  <div class="dropdown">
+    <input 
+      class="input input-bordered border-4 w-[45vw]" 
+      placeholder="Pick your choice"
+      bind:value={inputVal[3]}
+    />
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems4 as item}
+      <li>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+      </li>
+    {/each}
+    </ul>
+  </div>
+</div>
+<div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
+  <div class="dropdown">
+    <input 
+      class="input input-bordered border-4 w-[45vw]" 
+      placeholder="Pick your choice"
+      bind:value={inputVal[4]}
+    />
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
+    {#each filteredItems5 as item}
+      <li>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+      </li>
+    {/each}
+    </ul>
+  </div>
+</div>
+
 </div>
 
