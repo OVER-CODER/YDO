@@ -3,11 +3,9 @@
 	import Login from "./Login.svelte"
 	import { supabase } from "$lib/supabase";
 	import { onMount } from "svelte";
-	import { user } from "$lib/stores.js"
-	import { get } from "svelte/store";
 
 	async function checkuser() {
-		if(get(user).exists){
+		if(localStorage.user){
 			window.location.href = "/Dashboard";
 			return;
 		}
