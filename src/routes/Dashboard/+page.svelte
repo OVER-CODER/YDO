@@ -73,11 +73,11 @@
   <div class="flex justify-center h-10 px-7 font-serif text-xl">
     <h1> Submit your choices now and comback on Valentines day, to see who you are matched with...</h1>
 </div>
-<div class="h-1/2 w-1/2 flex flex-col justify-center items-center bg-cyan-500">
+<div class="h-1/3 w-1/2 flex flex-col justify-center rounded-box items-center shadow-md bg-purple-600/10">
 <div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      class="input input-bordered shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[0]}
     />
@@ -97,7 +97,7 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      class="input input-bordered shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[1]}
     />
@@ -116,7 +116,7 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      class="input input-bordered shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[2]}
     />
@@ -135,7 +135,7 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      class="input input-bordered shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[3]}
     />
@@ -154,7 +154,7 @@
 <div class="flex justify-center items-center  h-20 w-svw rounded-3xl ">
   <div class="dropdown">
     <input 
-      class="input input-bordered border-accent shadow-lg border-4 w-[40vw]" 
+      class="input input-bordered shadow-lg border-4 w-[40vw]" 
       placeholder="Pick your choice"
       bind:value={inputVal[4]}
     />
