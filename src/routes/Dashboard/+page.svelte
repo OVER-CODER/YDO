@@ -4,7 +4,6 @@
     let curruser:string|undefined = "";
     import { supabase } from "$lib/supabase";
 	import { onMount } from "svelte";
-	import { get } from "svelte/store";
 
     $: inputVal = ["","","","",""];
     // console.log(data)
@@ -115,7 +114,7 @@
     <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto">
     {#each filteredItems2 as item}
       <li>
-        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
+        <button type="button" on:click|preventDefault={() => onItemClicked(item.roll_no,1)} role="option" aria-selected={selectedItem === item.roll_no}>{item.name}</button>
       </li>
     {/each}
     </ul>
