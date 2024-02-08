@@ -28,17 +28,17 @@
         .map((b) => b.toString(16).padStart(2, "0"))
         .join(""); 
       console.log(curruser);
-      let tempdata = await supabase.from("names").select("choices").eq("roll_no", curruser?.toUpperCase())
+      let tempdata = await supabase.from("names").select("chosen_by").eq("roll_no", curruser?.toUpperCase())
       // console.log(tempdata.data,tempdata.data?.length);
       let tchoice = []
       if(tempdata.data){
-        tchoice = tempdata.data[0].choices?tempdata.data[0].choices:[];
+        tchoice = tempdata.data[0].chosen_by?tempdata.data[0].chosen_by:[];
       }
       tchoice.push(hashHex);
       console.log(tchoice);
      const { error } = await supabase
         .from("names")
-        .update({ choices: tchoice})
+        .update({ chosen_by: tchoice})
         .eq("roll_no", curruser?.toUpperCase())
       console.log(error)
 	  let nchoice = JSON.parse(localStorage.choices)
