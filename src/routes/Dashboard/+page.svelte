@@ -82,7 +82,7 @@
 	onMount(checkuser);
 </script>
 
-<main class="h-[100svh] w-screen bg-base-200 relative overflow-clip">
+<main class="h-[100svh] w-screen relative overflow-clip">
 	<Rose />
 	<div class="flex justify-center items-center translate-y-40 flex-col">
 		<div class="flex justify-center h-10 px-7 font-serif text-xl">
@@ -217,12 +217,3 @@
 	</div>
 </main>
 
-<style>
-	button,div,span,h1,input {
-		z-index: +100;
-		position: relative;
-	}
-	* {
-		transition: all 0.5s ease-in-out;
-	}
-</style>

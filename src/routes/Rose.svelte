@@ -4,7 +4,7 @@
 
 
 <!-- <div class="w-screen h-[100svh] bg-[#fadede] overflow-clip relative"> -->
-    <div class="absolute top-[520px] left-[750px] max-md:-translate-x-[550px] scale-[2.5] overflow-clip">
+    <div class="absolute top-[520px] left-[750px] max-md:-translate-x-[550px] scale-[2.5] overflow-clip pointer-events-none">
     <svg width="348" height="342" viewBox="0 0 348 342" fill="none" xmlns="http://www.w3.org/2000/svg" class="-z-40">
         <g clip-path="url(#clip0_1_2)">
         <path d="M168 -10C278 166 284 238 271 436" stroke="#77A377" stroke-width="7" stroke-linecap="square"/>

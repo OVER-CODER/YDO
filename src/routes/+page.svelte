@@ -26,7 +26,7 @@
 	onMount(checkuser);
 </script>
 
-<main class="h-[100svh] overflow-clip w-[100vw] relative">
+<main class="h-[100svh] overflow-clip w-[100vw] relative ">
 	<Header />
 	<Rose />
 	<Login />
