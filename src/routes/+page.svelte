@@ -10,7 +10,8 @@
 			return;
 		}
 		const { data, error } = await supabase.auth.getSession();
-		if(data.session){
+		if(data.session?.user){
+			localStorage.setItem("user",JSON.stringify(data.session.user));
 			window.location.href = "/Dashboard";
 		}
 		console.log(data);
