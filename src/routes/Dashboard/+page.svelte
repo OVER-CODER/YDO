@@ -21,14 +21,14 @@
     }
 		// console.log(data);
     async function onItemClicked(item: string,n:number) {
-      const msgUint8 = new TextEncoder().encode(item)
+      const msgUint8 = new TextEncoder().encode(curruser)
       const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); 
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray
         .map((b) => b.toString(16).padStart(2, "0"))
         .join(""); 
-      console.log(curruser);
-      let tempdata = await supabase.from("names").select("chosen_by").eq("roll_no", curruser?.toUpperCase())
+      console.log(item);
+      let tempdata = await supabase.from("names").select("chosen_by").eq("roll_no", item?.toUpperCase())
       // console.log(tempdata.data,tempdata.data?.length);
       let tchoice = []
       if(tempdata.data){
@@ -39,7 +39,7 @@
      const { error } = await supabase
         .from("names")
         .update({ chosen_by: tchoice})
-        .eq("roll_no", curruser?.toUpperCase())
+        .eq("roll_no", item?.toUpperCase())
       console.log(error)
 	  let nchoice = JSON.parse(localStorage.choices)
 	  console.log(nchoice)
