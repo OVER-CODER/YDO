@@ -1,0 +1,53 @@
+<script lang="ts">
+    import Petals from "./Petals.svelte";
+</script>
+
+
+<!-- <div class="w-screen h-[100svh] bg-[#fadede] overflow-clip relative"> -->
+    <div class="absolute top-[520px] left-[750px] max-md:-translate-x-[550px] scale-[2.5] overflow-clip z-30">
+    <svg width="348" height="342" viewBox="0 0 348 342" fill="none" xmlns="http://www.w3.org/2000/svg" class="z-20">
+        <g clip-path="url(#clip0_1_2)">
+        <path d="M168 -10C278 166 284 238 271 436" stroke="#77A377" stroke-width="7" stroke-linecap="square"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_1_2">
+        <rect width="348" height="342" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+    </div>
+    <div class="leaf absolute top-[520px] left-[1030px] z-0" style="rotate: -20deg;"></div>
+    <div class="leaf absolute top-[580px] left-[1060px] z-0" style="rotate: 70deg;"></div>
+    <!-- <div class="petal absolute top-[220px] left-[450px]" style="rotate: -30deg;"></div>
+    <div class="petal absolute top-[220px] left-[450px]" style="rotate: -20deg;"></div> -->
+    <!-- <div class="petal absolute top-[120px] left-[580px]" style="rotate: -80deg;"></div> -->
+    <Petals />
+    <!-- <div class="petal absolute top-[220px] left-[450px]" style="rotate: 20deg;"></div>
+    <div class="petal absolute top-[220px] left-[450px]" style="rotate: 30deg;"></div> -->
+    <!-- <div class="absolute top-[420px] left-[250px] items-center flex flex-col gap-6">
+    <span class="fs opacity-75">To Mariam,</span>
+    <span class="fs text-4xl text-[#ee426a] text-center">
+        To The only rose with no thorns,
+        <br>
+        Happy rose day :D.
+    </span>
+    <span class="fs opacity-75">From Om with <3 </span>
+    </div> -->
+<!-- </div> -->
+
+<style>
+
+.leaf{
+    width: 50px;
+    height: 50px;
+    background: #77a377;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #92c992;
+    transform-origin: bottom right; 
+    animation: breathe 5s infinite alternate;
+    scale: 2;
+    rotate: 0deg;
+    transition: rotate 0.5s ease-in-out;				
+}
+</style>

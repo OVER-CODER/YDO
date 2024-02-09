@@ -3,6 +3,7 @@
 	import Login from './Login.svelte';
 	import { supabase } from '$lib/supabase';
 	import { onMount } from 'svelte';
+	import Rose from './Rose.svelte';
 
 	async function checkuser() {
 		if (localStorage.user) {
@@ -20,8 +21,9 @@
 	onMount(checkuser);
 </script>
 
-<main>
+<main class="h-[100svh] overflow-clip w-[100vw] relative">
 	<Header />
+	<Rose />
 	<Login />
 </main>
 
