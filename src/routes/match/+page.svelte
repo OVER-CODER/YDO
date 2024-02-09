@@ -20,8 +20,12 @@
             .eq("roll_no", cur_roll?.toUpperCase());
 
         const chosenBy = data;
-        console.log(chosenBy[0].chosen_by)
-        return chosenBy[0].chosen_by;
+        if (chosenBy && chosenBy[0]?.chosen_by) {
+            console.log(chosenBy[0].chosen_by);
+            return chosenBy && chosenBy[0]?.chosen_by;
+        } else {
+            return [];
+        }
     }
 
     let matches = "";
@@ -36,7 +40,9 @@
                 // console.log(temphash,chosen_by[j],choices[i]);
                 if(temphash == chosen_by[j]){
                     const name = await supabase.from("names").select("name").eq("roll_no", choices[i].toUpperCase());
-                    matches += " " + name.data[0].name;
+                    if (name.data && name.data[0]) {
+                        matches += " " + name.data[0].name;
+                    }
                 }
             }
         }
