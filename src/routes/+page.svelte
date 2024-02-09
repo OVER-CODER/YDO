@@ -4,6 +4,7 @@
 	import Login from './Login.svelte';
 	import { supabase } from '$lib/supabase';
 	import { onMount } from 'svelte';
+	import Rose from './Rose.svelte';
 	let c = false;
 	async function checkuser() {
 		if (localStorage.user) {
