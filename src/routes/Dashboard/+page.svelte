@@ -4,6 +4,7 @@
 	let curruser: string | undefined = '';
 	import { supabase } from '$lib/supabase';
 	import { onMount } from 'svelte';
+	import Rose from '../Rose.svelte';
 
 	$: inputVal = ['', '', '', '', ''];
 	// console.log(data)
@@ -81,15 +82,16 @@
 	onMount(checkuser);
 </script>
 
-<main class="h-screen w-screen bg-base-200">
+<main class="h-[100svh] w-screen bg-base-200 relative overflow-clip">
+	<Rose />
 	<div class="flex justify-center items-center translate-y-40 flex-col">
 		<div class="flex justify-center h-10 px-7 font-serif text-xl">
-			<h1>
+			<h1 class="z-50">
 				Submit your choices now and comback on Valentines day, to see who you are matched with...
 			</h1>
 		</div>
 		<div
-			class="h-1/3 w-1/2 flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
+			class="z-50 h-1/3 w-1/2 flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
 		>
 			<div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl">
 				<div class="dropdown">
@@ -214,3 +216,13 @@
 		</div>
 	</div>
 </main>
+
+<style>
+	button,div,span,h1,input {
+		z-index: +100;
+		position: relative;
+	}
+	* {
+		transition: all 0.5s ease-in-out;
+	}
+</style>

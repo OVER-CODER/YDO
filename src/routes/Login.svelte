@@ -1,7 +1,4 @@
 <script lang="ts">
-    import Header from "./Header.svelte";
-    import Petels from "./Petals.svelte";
-    import { writable } from "svelte/store";
     import { supabase } from "$lib/supabase";
     
 
@@ -11,7 +8,7 @@
         })
     }
     </script>
-<div class="w-screen h-[95svh] bg-base-200 overflow-clip flex flex-col gap-[5%] humfirst">
+<div class="w-screen h-[95svh] bg-base-200 overflow-clip flex flex-col gap-[5%]">
     <div class="flex flex-col gap-6 pl-[10%] pt-[10%]">
         <div class=" text-6xl font-Stint select-none leading-tight humfirst">Looking for a 
             <br><span class="text-pink-500 fs humfirst">match?</span></div>
