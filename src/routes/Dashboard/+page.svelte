@@ -21,7 +21,7 @@
     }
 		// console.log(data);
     async function onItemClicked(item: string,n:number) {
-      const msgUint8 = new TextEncoder().encode(curruser)
+      const msgUint8 = new TextEncoder().encode(curruser?.toUpperCase())
       const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); 
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray

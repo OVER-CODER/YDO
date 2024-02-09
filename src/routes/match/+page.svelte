@@ -31,11 +31,12 @@
         let chosen_by = await getchosen();
         for(let i = 0;i<choices.length;i++){
             let temphash = await gethash(choices[i]);
+            console.log(choices[i],temphash)
             for(let j = 0;j<chosen_by.length;j++){
-                console.log(temphash,chosen_by[j]);
+                // console.log(temphash,chosen_by[j],choices[i]);
                 if(temphash == chosen_by[j]){
-                    console.log(choices[i]);
-                    matches += " " + choices[i];
+                    const name = await supabase.from("names").select("name").eq("roll_no", choices[i].toUpperCase());
+                    matches += " " + name.data[0].name;
                 }
             }
         }
@@ -44,6 +45,7 @@
     onMount(match)
 </script>
 
-<span>
-{matches}
-</span>
+<div class="w-full h-[100svh] flex flex-col justify-center items-center gap-4">
+    <span class="text-3xl ">It's a match!</span>
+    <span class="text-2xl">You and { matches } have chosen each other!</span>
+</div>
