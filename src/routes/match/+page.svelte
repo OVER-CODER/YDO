@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from "svelte";
     import { supabase } from "$lib/supabase";
-
+    export let data;
+    console.log(data);
     async function gethash(item: string) {
         const msgUint8 = new TextEncoder().encode(item);
         const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
@@ -54,6 +55,8 @@
     onMount(match)
 </script>
 
+
+{#if data.hi}
 <div class="w-screen h-[100svh] flex flex-col pt-[10%] items-center gap-4">
     {#if isntmatch==1}
         <span class="text-3xl">YOU have no matches :(</span>
@@ -64,4 +67,8 @@
         {/each}
     {/if}
 </div>
-
+{:else}
+<div class="w-screen h-[100svh] flex flex-col pt-[10%] items-center gap-4">
+    <span class="text-3xl">You can see your matches on 14 feb 12:00 am</span>
+</div>
+{/if}

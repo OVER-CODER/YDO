@@ -163,7 +163,7 @@
 	<div class="flex justify-center items-center pt-[12%] max-md:pt-[20%] flex-col gap-4">
 		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
 			<h1 class="z-50">
-				Submit your choices now and comback on Valentines day, to see who you are matched with...
+				Submit your choices now and coemback on Valentines day, to see who you are matched with...
 			</h1>
 		</div>
 		<div
