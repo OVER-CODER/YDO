@@ -87,16 +87,16 @@
 
 <main class="h-[100svh] w-screen relative overflow-clip">
 	<Rose />
-	<div class="flex justify-center items-center translate-y-40 flex-col">
-		<div class="flex justify-center h-10 px-7 font-serif text-xl">
+	<div class="flex justify-center items-center pt-[12%] max-md:pt-[20%] flex-col gap-4">
+		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
 			<h1 class="z-50">
 				Submit your choices now and comback on Valentines day, to see who you are matched with...
 			</h1>
 		</div>
 		<div
-			class="z-50 h-1/3 w-[60%] max-md:w-full flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
+			class="z-50 h-1/3 w-[60%] max-md:w-[95vw] max-md:mx-2 flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
 		>
-			<div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl">
+			<div class="flex justify-center items-center gap-1 h-20 w-[95vw] rounded-3xl">
 				<div class="dropdown flex gap-5">
 					<input
 						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
@@ -105,7 +105,7 @@
 					/>
 					<button class="btn"> Delete </button>
 					<ul
-						class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-[1] menu p-2 shadow-lg bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems1 as item}
 							<li>
@@ -120,7 +120,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
+			<div class="flex justify-center items-center h-20 w-[95vw] rounded-3xl">
 				<div class="dropdown flex gap-5">
 					<input
 						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
@@ -129,7 +129,7 @@
 					/>
 					<button class="btn"> Delete </button>
 					<ul
-						class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[45vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems2 as item}
 							<li>
@@ -144,7 +144,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
+			<div class="flex justify-center items-center h-20 w-[95vw] rounded-3xl">
 				<div class="dropdown flex gap-5">
 					<input
 						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
@@ -153,7 +153,7 @@
 					/>
 					<button class="btn"> Delete </button>
 					<ul
-						class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems3 as item}
 							<li>
@@ -168,7 +168,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
+			<div class="flex justify-center items-center h-20 w-[95vw] rounded-3xl">
 				<div class="dropdown flex gap-5">
 					<input
 						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
@@ -177,7 +177,7 @@
 					/>
 					<button class="btn"> Delete </button>
 					<ul
-						class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems4 as item}
 							<li>
@@ -192,7 +192,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
+			<div class="flex justify-center items-center h-20 w-[95vw] rounded-3xl">
 				<div class="dropdown flex gap-5">
 					<input
 						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
@@ -201,7 +201,7 @@
 					/>
 					<button class="btn"> Delete </button>
 					<ul
-						class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[45vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems5 as item}
 							<li>
