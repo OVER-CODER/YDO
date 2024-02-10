@@ -5,12 +5,14 @@
 	import { supabase } from '$lib/supabase';
 	import { onMount } from 'svelte';
 	import Rose from '../Rose.svelte';
+	import Submitted from '../Submitted.svelte';
 
 	let input1:HTMLInputElement;
 	let input2:HTMLInputElement;
 	let input3:HTMLInputElement;
 	let input4:HTMLInputElement;
 	let input5:HTMLInputElement;
+	let submit = false;
 	let input:Array<HTMLInputElement>;
 	$: inputVal = ['', '', '', '', ''];
 	let tmpchoices = ['','','','','',''];
@@ -52,6 +54,7 @@
 	}
 	// console.log(data);
 	async function onItemClicked(item: string, n: number, name: string) {
+		submit = true;
 		console.log(input)
 		input[n].value = name;
 		inputVal[n] = name;
@@ -84,6 +87,7 @@
 		nchoice[n] = item;
 		localStorage.setItem('choices', JSON.stringify(nchoice));
 		//   console.log(localStorage.choices,nchoice);
+		submit = false;
 	}
 
 	async function DeleteEntry(item: string, n: number, name: string) {
@@ -163,7 +167,7 @@
 	<div class="flex justify-center items-center pt-[12%] max-md:pt-[20%] flex-col gap-4">
 		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
 			<h1 class="z-50">
-				Submit your choices now and coemback on Valentines day, to see who you are matched with...
+				Submit your choices now and comeback on Valentines day, to see who you are matched with...
 			</h1>
 		</div>
 		<div
@@ -185,7 +189,7 @@
 							<li>
 								<button
 									type="button"
-									on:click={() => onItemClicked(item.roll_no, 0, item.name)}
+									on:click={() => onItemClicked(item.roll_no, 0, item.name) }
 									role="option"
 									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm opacity-45">{item.roll_no}</span></button
 								>
@@ -297,4 +301,9 @@
 		</div>
 	</div>
 </main>
+<div>
+	{#if submit == true}
+	<Submitted />
+	{/if}
+</div>
 
