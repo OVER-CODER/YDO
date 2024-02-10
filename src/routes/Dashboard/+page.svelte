@@ -94,12 +94,12 @@
 			</h1>
 		</div>
 		<div
-			class="z-50 h-1/3 w-1/2 flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
+			class="z-50 h-1/3 w-[60%] max-md:w-full flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
 		>
 			<div class="flex justify-center items-center gap-1 h-20 w-svw rounded-3xl">
-				<div class="dropdown">
+				<div class="dropdown flex gap-5">
 					<input
-						class="input shadow-lg border-4 w-[40vw]"
+						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
 						placeholder="Pick your choice"
 						bind:value={inputVal[0]}
 					/>
@@ -121,9 +121,9 @@
 				</div>
 			</div>
 			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
-				<div class="dropdown">
+				<div class="dropdown flex gap-5">
 					<input
-						class="input shadow-lg border-4 w-[40vw]"
+						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
 						placeholder="Pick your choice"
 						bind:value={inputVal[1]}
 					/>
@@ -145,9 +145,9 @@
 				</div>
 			</div>
 			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
-				<div class="dropdown">
+				<div class="dropdown flex gap-5">
 					<input
-						class="input shadow-lg border-4 w-[40vw]"
+						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
 						placeholder="Pick your choice"
 						bind:value={inputVal[2]}
 					/>
@@ -169,9 +169,9 @@
 				</div>
 			</div>
 			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
-				<div class="dropdown">
+				<div class="dropdown flex gap-5">
 					<input
-						class="input shadow-lg border-4 w-[40vw]"
+						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
 						placeholder="Pick your choice"
 						bind:value={inputVal[3]}
 					/>
@@ -193,9 +193,9 @@
 				</div>
 			</div>
 			<div class="flex justify-center items-center h-20 w-svw rounded-3xl">
-				<div class="dropdown">
+				<div class="dropdown flex gap-5">
 					<input
-						class="input shadow-lg border-4 w-[40vw]"
+						class="input shadow-lg border-4 w-[40vw] max-md:w-[70vw]"
 						placeholder="Pick your choice"
 						bind:value={inputVal[4]}
 					/>
