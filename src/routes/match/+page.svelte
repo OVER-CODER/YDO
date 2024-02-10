@@ -56,11 +56,11 @@
 
 <div class="w-screen h-[100svh] flex flex-col pt-[10%] items-center gap-4">
     {#if isntmatch==1}
-        <span class="text-3xl">You have no matches :(</span>
+        <span class="text-3xl">YOU have no matches :(</span>
     {:else}
-        <span class="text-3xl">You have {matches.length} <span>matches</span></span>
+        <span class="text-3xl">YOU have {matches.length} <span>matches</span></span>
         {#each matches as m}
-            <span class="text-2xl">you and {m} have matched!</span>
+            <span class="text-2xl">YOU and {m} have matched!</span>
         {/each}
     {/if}
 </div>
