@@ -28,7 +28,8 @@
         }
     }
 
-    let matches = "";
+    let matches:Array<string> = [];
+    let isntmatch =  1;
     async function match() {
         let lchoice = localStorage.getItem("choices");
         let choices = lchoice?JSON.parse(lchoice):[];
@@ -41,17 +42,26 @@
                 if(temphash == chosen_by[j]){
                     const name = await supabase.from("names").select("name").eq("roll_no", choices[i].toUpperCase());
                     if (name.data && name.data[0]) {
-                        matches += " " + name.data[0].name;
+                        isntmatch = 0;
+                        matches = [...matches,name.data[0].name];
                     }
                 }
             }
+            // console.log(matches,c)
         }
     }
 
     onMount(match)
 </script>
 
-<div class="w-full h-[100svh] flex flex-col justify-center items-center gap-4">
-    <span class="text-3xl ">It's a match!</span>
-    <span class="text-2xl">You and { matches } have chosen each other!</span>
+<div class="w-screen h-[100svh] flex flex-col pt-[10%] items-center gap-4">
+    {#if isntmatch==1}
+        <span class="text-3xl">You have no matches :(</span>
+    {:else}
+        <span class="text-3xl">You have {matches.length} <span>matches</span></span>
+        {#each matches as m}
+            <span class="text-2xl">you and {m} have matched!</span>
+        {/each}
+    {/if}
 </div>
+

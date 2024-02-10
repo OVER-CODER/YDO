@@ -20,15 +20,15 @@
 </script>
 
 <div class="contents" bind:this={pdiv}>
-<div class="petal absolute top-[220px] left-[880px] max-md:left-[330px] z-0 bg-[#ff6186] theonewhogoes"></div>
+<div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-40 bg-[#ff6186] theonewhogoes"></div>
 <div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-30 bg-[#ff6186]"></div>
-<div class="petal absolute top-[220px] left-[900px] max-md:left-[330px] -z-10 bg-[#ff6186]"></div>
+<div class="petal absolute top-[220px] left-[900px]  max-md:left-[350px]  z-0 bg-[#ff6186]"></div>
 <div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-20 bg-[#ff6186]"></div>
-<div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] z-0 bg-[#ee426a]"></div>
+<div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-10 bg-[#ee426a]"></div>
 <div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-20 bg-[#ff6186]"></div>
 <div class="petal absolute top-[235px] left-[880px]  max-md:left-[330px] z-0 bg-[#ff6186]"></div>
 <div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-30 bg-[#ff6186]"></div>
-<div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] z-0 bg-[#ff6186]"></div>
+<div class="petal absolute top-[220px] left-[880px]  max-md:left-[330px] -z-40 bg-[#ff6186]"></div>
 </div>
 
 <style>

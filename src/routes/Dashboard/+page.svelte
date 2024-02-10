@@ -7,7 +7,7 @@
 	import Rose from '../Rose.svelte';
 
 	$: inputVal = ['', '', '', '', ''];
-	// console.log(data)
+	console.log(data)
 	async function checkuser() {
 		if (localStorage.choices == undefined) {
 			localStorage.setItem('choices', JSON.stringify(['', '', '', '', '']));
@@ -63,6 +63,9 @@
 			let inputl = input.split(' ');
 			let inc = true;
 			for (let j = 0; j < inputl.length; j++) {
+				// if(data.name[i].name.includes("ARYAN PANDIT")){
+				// 	console.log(data.name[i]);
+				// }
 				if (!data.name[i].name.toLowerCase().includes(inputl[j].toLowerCase())) {
 					inc = false;
 				}
@@ -110,7 +113,7 @@
 									type="button"
 									on:click|preventDefault={() => onItemClicked(item.roll_no, 0)}
 									role="option"
-									aria-selected={selectedItem === item.roll_no}>{item.name}</button
+									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm opacity-45">{item.roll_no}</span></button
 								>
 							</li>
 						{/each}
@@ -134,7 +137,7 @@
 									type="button"
 									on:click|preventDefault={() => onItemClicked(item.roll_no, 1)}
 									role="option"
-									aria-selected={selectedItem === item.roll_no}>{item.name}</button
+									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm">{item.roll_no}</span></button
 								>
 							</li>
 						{/each}
@@ -158,7 +161,7 @@
 									type="button"
 									on:click|preventDefault={() => onItemClicked(item.roll_no, 2)}
 									role="option"
-									aria-selected={selectedItem === item.roll_no}>{item.name}</button
+									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm">{item.roll_no}</span></button
 								>
 							</li>
 						{/each}
@@ -182,7 +185,7 @@
 									type="button"
 									on:click|preventDefault={() => onItemClicked(item.roll_no, 3)}
 									role="option"
-									aria-selected={selectedItem === item.roll_no}>{item.name}</button
+									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm">{item.roll_no}</span></button
 								>
 							</li>
 						{/each}
@@ -206,7 +209,7 @@
 									type="button"
 									on:click|preventDefault={() => onItemClicked(item.roll_no, 4)}
 									role="option"
-									aria-selected={selectedItem === item.roll_no}>{item.name}</button
+									aria-selected={selectedItem === item.roll_no}>{item.name} <span class="font-mono text-sm">{item.roll_no}</span></button
 								>
 							</li>
 						{/each}
