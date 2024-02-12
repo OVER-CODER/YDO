@@ -183,7 +183,7 @@
 					/>
 					<button class="btn" on:click={() => DeleteEntry(tmpchoices[0],0,inputVal[0])}> Delete </button>
 					<ul
-						class="dropdown-content mt-12 z-[1] menu p-2 shadow-lg bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-50 menu p-2 shadow-lg bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems1 as item}
 							<li>
@@ -208,7 +208,7 @@
 					/>
 					<button class="btn" on:click={() => DeleteEntry(tmpchoices[1],1,inputVal[1])}> Delete </button>
 					<ul
-						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-50 menu p-2 shadow bg-base-100 rounded-b-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems2 as item}
 							<li>
@@ -233,7 +233,7 @@
 					/>
 					<button class="btn" on:click={() => DeleteEntry(tmpchoices[2],2,inputVal[2])}> Delete </button>
 					<ul
-						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-50 menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems3 as item}
 							<li>
@@ -258,7 +258,7 @@
 					/>
 					<button class="btn" on:click={() => DeleteEntry(tmpchoices[3],3,inputVal[3])}> Delete </button>
 					<ul
-						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-50 menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems4 as item}
 							<li>
@@ -283,7 +283,7 @@
 					/>
 					<button class="btn" on:click={() => DeleteEntry(tmpchoices[4],4,inputVal[4])}> Delete </button>
 					<ul
-						class="dropdown-content mt-12 z-[1] menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
+						class="dropdown-content mt-12 z-50 menu p-2 shadow bg-base-100 rounded-box w-[40vw] max-md:w-[70vw] max-h-52 flex-nowrap overflow-auto"
 					>
 						{#each filteredItems5 as item}
 							<li>
@@ -299,8 +299,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
-			<h1 class="z-50">
+		<div class="flex z-0 justify-center font-serif text-xl text-center max-md:text-base mx-2">
+			<h1>
 				To maintain privacy your choices are hashed while storing in the database.
 			<br>
 				You can see your matches on 14th Feb <a class="link" href="https://ydo.vercel.app/match">here.</a>
