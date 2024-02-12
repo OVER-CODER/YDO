@@ -299,6 +299,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
+			<h1 class="z-50">
+				To maintain privacy your choices are hashed while storing in the database.
+			<br>
+				You can see your matches on 14th Feb <a class="link" href="https://ydo.vercel.app/match">here.</a>
+			</h1>
+		</div>
 	</div>
 </main>
 <div>
