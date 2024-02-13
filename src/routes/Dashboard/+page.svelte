@@ -58,6 +58,9 @@
 	}
 	// console.log(data);
 	async function onItemClicked(item: string, n: number, name: string) {
+		if(data.show){
+			return;
+		}
 		submit = true;
 		console.log(input)
 		input[n].value = name;
@@ -95,6 +98,9 @@
 	}
 
 	async function DeleteEntry(item: string, n: number, name: string) {
+		if (data.show){
+			return
+		}
 		if(input[n].disabled == false){
 			return;
 		}
