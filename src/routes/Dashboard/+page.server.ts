@@ -8,7 +8,7 @@ export async function load() {
   const currentDate = new Date();
   const targetDate = new Date("2024-02-14T00:00:00");
 
-  const hehe = currentDate > targetDate;
+  const hehe = true;
   return {
     name: data ?? [],
     show: hehe,
