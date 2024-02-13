@@ -29,10 +29,11 @@
     {#if isInstagram}
     <div class="pl-[10%] text-xl text-red-500 font-mono select-none humfirst">Open the website in your browser instead of Instagram to login</div>
     {:else}
-    <div class="flex flex-row gap-2">
+    <div class="pl-[10%] text-xl text-red-500 font-mono select-none humfirst">Time Up! come back next year.</div>
+    <!-- <div class="flex flex-row gap-2">
     <button on:click={SigninWithGoogle} class="ml-[10%] btn btn-md btn-primary w-max humfirst">Login to find you match!</button>
     <button on:click={optout} class="btn btn-md btn-outline btn-error w-max humfirst">Opt out!</button>
-    </div>
+    </div> -->
     {/if}
 </div>
 
