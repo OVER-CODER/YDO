@@ -25,6 +25,9 @@
 		} else{
 			let temp = JSON.parse(localStorage.choices);
 			for (let i = 0; i < temp.length; i++) {
+				if(data.show){
+					input[i].disabled = true
+				}
 				if (temp[i] != '') {					
 					let name = '';
 					for (let j = 0; j < data.name.length; j++) {
@@ -38,6 +41,7 @@
 					input[i].disabled = true;
 				}
 				tmpchoices = temp;
+				console.log(tmpchoices)
 			}
 		}
 		if (localStorage.user) {
@@ -165,11 +169,19 @@
 <main class="h-[100svh] w-screen relative overflow-clip">
 	<Rose />
 	<div class="flex justify-center items-center pt-[12%] max-md:pt-[20%] flex-col gap-4">
+		{#if data.show}
+		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
+			<h1 class="z-50">
+				Choice filling time has ended have a look at your matches <a class="link" href="https://ydo.vercel.app/match">here.</a>
+			</h1>
+		</div>
+		{:else}
 		<div class="flex justify-center font-serif text-xl text-center max-md:text-base mx-2">
 			<h1 class="z-50">
 				Submit your choices now and comeback on Valentines day, to see who you are matched with...
 			</h1>
 		</div>
+		{/if}
 		<div
 			class="z-50 h-1/3 w-[60%] max-md:w-[95vw] max-md:mx-2 flex flex-col justify-center rounded-box items-center shadow-md bg-accent/35"
 		>

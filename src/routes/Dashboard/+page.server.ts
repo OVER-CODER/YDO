@@ -5,7 +5,12 @@ export async function load() {
   // const userdata=  await supabase.auth.getUser()
   // console.log(userdata)
   // console.log(data)
+  const currentDate = new Date();
+  const targetDate = new Date("2024-02-14T00:00:00");
+
+  const hehe = currentDate > targetDate;
   return {
     name: data ?? [],
+    show: hehe,
   };
 }
